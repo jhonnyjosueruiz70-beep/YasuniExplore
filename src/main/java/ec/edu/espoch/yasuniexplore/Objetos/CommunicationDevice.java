@@ -1,13 +1,52 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espoch.yasuniexplore.Objetos;
 
 /**
- *
- * @author User
+ * Clase que representa un dispositivo de comunicacion.
+ * Atributos privados con encapsulamiento.
  */
 public class CommunicationDevice {
-    
+    private String code;
+    private String description;
+    private boolean available;
+
+    public CommunicationDevice(String code, String description) {
+        this.code = code;
+        this.description = description;
+        this.available = true;
+    }
+
+    public CommunicationDevice(String code, String description, boolean available) {
+        this.code = code;
+        this.description = description;
+        this.available = available;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    @Override
+    public String toString() {
+        return "Dispositivo: " + code + " - " + description + " | Disponible: " + available;
+    }
 }
